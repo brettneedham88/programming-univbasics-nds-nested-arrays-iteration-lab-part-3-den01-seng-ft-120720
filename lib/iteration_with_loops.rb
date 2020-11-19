@@ -1,17 +1,15 @@
 def join_nested_strings(src)
   string_array = []
   row_index = 0
-  string_array_element = nil
   while row_index < src.count do
     element_index = 0 
-    string_array_element = 
     while element_index < src[row_index].count do
-      if string_array_element == nil || src[row_index][element_index] < string_array_element
-        string_array_element = src[row_index][element_index]
-      end 
+      if src[row_index][element_index].class == String
+        src[row_index][element_index] << string_array
+      end
       element_index += 1 
     end
-    string_array << string_array_element
+    
     row_index += 1
   end 
 string_array
