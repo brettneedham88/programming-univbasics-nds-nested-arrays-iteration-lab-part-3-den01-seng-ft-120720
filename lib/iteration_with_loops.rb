@@ -6,7 +6,7 @@ def join_nested_strings(src)
     element_index = 0 
     string_array_element = 
     while element_index < src[row_index].count do
-      if src[row_index][element_index] < string_array_element
+      if lowest_temperatures_element == nil ||src[row_index][element_index] < string_array_element
         string_array_element = src[row_index][element_index]
       end 
       element_index += 1 
